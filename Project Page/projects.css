@@ -1,911 +1,1592 @@
-/* Project style.css */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
-
-/* (*) below means the universal symbol and applying it to everything */
-
-:root {
-  --primary-color: #07acf3; /* --#373b69; #22254b; */
-  --secondary-color: #07acf3; /* #373b69; */
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: whitesmoke;
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-}
-
-/* Header */
-header {
-  padding: 1rem;
-  display: flex;
-  justify-content: flex-end;
-  background-color: var(--secondary-color);
-}
-
-/* .search {}*/
-/* .search {
-  background-color: transparent;
-  border: 2px solid whitesmoke;
-  border-radius: 50px;
-  font-family: inherit;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  color: #fff;
-} */
-
-/* .search::placeholder {} */
-/* .search::placeholder {
-  color: whitesmoke;
-} */
-
-/* .search:focus {} */
-/* .search:focus {
-  outline: none;
-  background-color: #6a6c8d;
-} */
-
-/* Header Button */
-/* .button {
-  background-color: transparent;
-  border: 2px solid whitesmoke;
-  border-radius: 50px;
-  font-family: inherit;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  color: #fff;
-
-  width: 25rem;
-  height: 7rem;
-  background-color: #07acf3;
-  font-family: 'Multi', serif;
-  font-size: 2rem;
-  text-transform: uppercase;
-  color: #fff;
-  text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0.9rem 0.5rem rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-  opacity: 0;
-  animation: moveBanner 1s 0.9s forwards;
-} */
-
-/* .button::placeholder {} */
-.button::placeholder {
-  color: whitesmoke;
-}
-
-/* .button:focus {} */
-.button:focus {
-  outline: none;
-  background-color: #6a6c8d;
-}
-
-/* main {} */
-main {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* Banner Image */
-.img-wrapper {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  overflow: hidden;
-}
-
-.img-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.5;
-  animation: scale 25s;
-}
-
-/* Img Animations */
-@keyframes scale {
-  0% {
-    transform: scale(1.3);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-/* Banner */
-/* .banner {
-  position: absolute;
-  top: 30%;
-  left: 10%;
-} */
-
-.banner h1 {
-  font-family: 'Multi', serif;
-  font-size: 8rem;
-  font-weight: 300;
-  color: #fff;
-  width: 50%;
-  line-height: 8rem;
-  letter-spacing: 0.2rem;
-  text-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.4);
-  opacity: 0;
-  animation: moveBanner 1s 0.9s forwards;
-}
-
-/* Banner Paragraph (p) */
-.banner p {
-  font-family: 'Multi', serif;
-  font-size: 4rem;
-  color: #fff;
-  width: 70%;
-  letter-spacing: 0.1rem;
-  margin-bottom: 5rem;
-  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
-  opacity: 0;
-  animation: moveBanner 1s 0.7s forwards;
-}
-
-/* Banner Button */
-.button {
-  width: 23rem;
-  height: 3rem;
-  background-color: #07acf3;
-  border: 2px solid whitesmoke;
-  border-radius: 50px;
-  font-family: 'Multi', serif;
-  font-size: 20px;
-  text-transform: uppercase;
-  color: #fff;
-  text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0.9rem 0.5rem rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-  opacity: 0;
-  padding: 10px 20px;
-  margin: 10px;
-  animation: moveBanner 1s 0.5s forwards;
-}
-
-/* Banner Animations */
-@keyframes moveBanner {
-  0% {
-    transform: translateY(40rem) rotateY(-20deg);
-  }
-  100% {
-    transform: translateY(0) rotateY(0);
-    opacity: 1;
-  }
-}
-
-/* .project {} */
-.project {
-  width: 300px;
-  margin: 1rem;
-  background-color: var(--secondary-color);
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-  position: relative;
-  overflow: hidden;
-  border-radius: 3px;
-}
-
-/* .project img {} */
-.project img {
-  width: 100%;
-}
-
-/* .projects-info {} */
-.center {
-  color: #eee;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem 1rem 1rem;
-  letter-spacing: 0.5px;
-}
-
-/* .projects-info h3 */
-.projects-info h3 {
-  margin-top: 0;
-}
-
-/* .projects-info span */
-.overview span {
-  background-color: #6a6c8d;
-  padding: 0.25rem 0.5rem;
-  border-radius: 3px;
-  font-weight: bold;
-}
-
-/* .projects-info span */
-/* .projects-info span.green {
-  color: lightgreen;
-} */
-
-/* .projects-info span.orange {
-  color: orange;
-}
-
-.projects-info span.red {
-  color: red;
-} */
-
-/* .overview */
-.overview {
-  background-color: white;
-  padding: 2rem;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  max-height: 100%;
-  transform: translateY(101%);
-  transition: transform 0.4s ease-in;
-}
-
-/* .project:hover .overview {} */
-.project:hover .overview {
-  transform: translateY(0);
-}
-
-/* .container {} */
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-/* Ripple Effect Button */
-
-/* (*) below means the universal symbol and applying it to everything */
-* {
-  box-sizing: border-box;
-}
-
-/* body {} */
-body {
-  font-family: 'Poppins', sans-serif;
-  /* display: flex; */
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  /* overflow: hidden;  */
-  margin: 0;
-}
-
-/* Card Buttons {} */
-button {
-  background-color: #07acf3; /*#373b69; */
-  color: white;
-  border: 1px #07acf3; /*#373b69 solid;*/
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding: 20px 30px;
-  /* overflow: hidden; */
-  margin: 10px 0;
-  position: relative;
-}
-
-/* button:focus {} */
-button:focus {
-  outline: none;
-}
-
-/* button .circle {} */
-button .circle {
-  position: absolute;
-  background-color: #fff;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 1px #07acf3;
-  transform: translate(-50%, -50%) scale(0);
-  animation: scale 0.5s ease-out;
-}
-
-/* @keyframes scale {} */
-@keyframes scale {
-  to {
-    transform: translate(-50%, -50%) scale(3);
-    opacity: 0;
-  }
-}
-
-/* Footer Icons */
-.footer {
-  width: 100%;
-  height: 11rem;
-  background-color: #eee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer-content {
-  width: 85%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.copyright {
-  font-family: 'Multi', serif;
-  font-size: 1.3rem;
-  color: #a7a7a7;
-}
-
-.social-list a {
-  margin: 0 1rem;
-}
-
-.social-list i {
-  font-size: 1.9rem;
-  color: #07acf3e8;
-  padding: 0.67rem;
-  background-color: #a7a7a7;
-  border-radius: 0.25rem;
-}
-
-/* Scroll Button */
-.scroll-btn {
-  position: fixed;
-  right: 1.5rem;
-  bottom: 4.3rem;
-  width: 3rem;
-  height: 3.2rem;
-  background-color: #a7a7a7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  color: #07acf3;
-  box-shadow: 0 0.1rem 0.6rem rgba(0, 0, 0, 0.2);
-  border-radius: 0.25rem;
-}
-
-@media (max-width: 1500px) {
-  .about-us-img-wrapper {
-    grid-row: 3 / -1;
-  }
-
-  @media (max-width: 500px) {
-    html {
-      font-size: 45%;
-    }
-  }
-}
-/* *************************************** */
-/* Hamburger Menu */
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  font-family: 'Montserrat', sans-serif;
-}
-
-/* Banner */
-.banner {
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(../images/banner-1.jpg) center no-repeat;
-  background-size: cover;
-}
-/* End of Banner */
-
-/* Logo */
-.logo {
-  height: 80px;
-  width: 80px;
-  position: fixed;
-  top: 20px;
-  left: 50px;
-  z-index: 100;
-}
-
-.logo img {
-  width: 100%;
-}
-/* End of Logo */
-
-/* Hamburger Menu */
-.hamburger-menu {
-  width: 35px;
-  height: 30px;
-  position: fixed;
-  top: 40px;
-  right: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  z-index: 100;
-}
-
-.line {
-  width: inherit;
-  height: 5px;
-  background-color: #07acf3;
-  border-radius: 25px;
-  transform-origin: right;
-  transition: transform 0.5s;
-}
-
-.line-2 {
-  height: 3px;
-}
-
-.change .line-1 {
-  transform: rotateZ(-45deg);
-}
-
-.change .line-2 {
-  transform: translate(5px, 20px);
-}
-
-.change .line-3 {
-  transform: rotateZ(45deg);
-}
-/* End of Hamburger Menu */
-
-/* Banner Button */
-.btn-wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  perspective: 1000px;
-}
-
-.banner-btn {
-  width: 350px;
-  height: 100px;
-  background: linear-gradient(#07acf3, #227599);
-  border: none;
-  outline: none;
-  font-family: 'Slabo 27px', serif;
-  font-size: 35px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  color: #fff;
-  text-shadow: 0 10px 10px #000;
-  cursor: pointer;
-  transform: rotateX(70deg) rotateZ(30deg);
-  transform-style: preserve-3d;
-  transition: transform 0.5s;
-}
-
-.banner-btn:hover {
-  transform: rotateX(30deg) rotateZ(0deg);
-}
-
-.banner-btn::before {
-  content: '';
-  width: 100%;
-  height: 15px;
-  background-color: #07acf3;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  transform: rotateX(90deg);
-  transform-origin: bottom;
-}
-
-.banner-btn::after {
-  content: '';
-  width: 15px;
-  height: 100%;
-  background-color: #227599;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: rotateY(-90deg);
-  transform-origin: right;
-}
-/* End of Banner Button */
-
-/* Top Nav */
-.top-nav {
-  height: 15vh;
-  width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8),
-    url(../images/banner-3.jpg) no-repeat 50% 0;
-  background-size: cover;
-  position: fixed;
-  top: -15vh;
-  z-index: 50;
-  transition: top 0.4s;
-}
-
-.change .top-nav {
-  top: 0;
-}
-
-.nav-list {
-  list-style: none;
-  width: 80%;
-  margin: auto;
-  height: inherit;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.nav-list li {
-  perspective: 500px;
-}
-
-.nav-link {
-  text-decoration: none;
-  font-family: 'Slabo 27px', serif;
-  font-size: 30px;
-  text-transform: uppercase;
-  color: #ccc;
-  background-color: #000;
-  letter-spacing: 1px;
-  padding: 5px 10px;
-  display: block;
-  position: relative;
-  transform-style: preserve-3d;
-  transform-origin: top;
-  transition: transform 0.3s;
-}
-
-.nav-link:hover {
-  transform: rotateX(90deg);
-}
-
-.nav-link::after {
-  content: attr(data-text);
-  position: absolute;
-  left: 0;
-  bottom: -100%;
-  background-color: #000;
-  padding: inherit;
-  color: #07acf3;
-  transform: rotateX(-90deg);
-  transform-origin: top;
-}
-/* End of Top Nav */
-
-/* Bottom Nav */
-.bottom-nav {
-  width: 100%;
-  height: 85vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(../images/banner-3.jpg) no-repeat 50% -15vh;
-  background-size: cover;
-  position: fixed;
-  bottom: -85vh;
-  transition: bottom 0.4s;
-}
-
-.change .bottom-nav {
-  bottom: 0;
-}
-/* End of Bottom Nav */
-
-/* Icon Links */
-.icons {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  list-style: none;
-  display: flex;
-  width: 60%;
-  justify-content: space-between;
-}
-
-.icon-item {
-  perspective: 1000px;
-}
-
-.icon-link {
-  width: 200px;
-  height: 200px;
-  border: 8px solid #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  border-radius: 5px;
-  transform-style: preserve-3d;
-  transition: transform 0.5s;
-}
-
-.icon-link:hover {
-  transform: rotateY(35deg);
-}
-
-.icon-link::before {
-  content: '';
-  height: 19.5px;
-  width: 5px;
-  background-color: #fff;
-  position: absolute;
-  top: 0;
-}
-
-.icon-link::after {
-  content: '';
-  height: 19.5px;
-  width: 5px;
-  background-color: #fff;
-  position: absolute;
-  bottom: 0;
-}
-
-.icon-link i {
-  color: #fff;
-  font-size: 60px;
-  width: 150px;
-  height: 150px;
-  background-color: #555;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 3px solid #fff;
-  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  position: relative;
-  transition: all 0.5s;
-}
-
-.icon-link:hover i {
-  transform: rotateY(-70deg);
-  text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-}
-
-.icon-link i::after {
-  content: '';
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: -130%;
-  right: -130%;
-  border-radius: 100%;
-  z-index: -1;
-  transition: all 0.3s;
-}
-
-.icon-item:nth-child(1) .icon-link i::after {
-  background-color: #3b5999;
-}
-.icon-item:nth-child(2) .icon-link i::after {
-  background-color: #211f1f;
-}
-.icon-item:nth-child(3) .icon-link i::after {
-  background-color: #2867b2;
-}
-/* .icon-item:nth-child(4) .icon-link i::after {
-  background-color: #cd201f;
-}
-.icon-item:nth-child(5) .icon-link i::after {
-  background-color: #55acee;
-}
-.icon-item:nth-child(6) .icon-link i::after {
-  background-color: #dd4b39;
-} */
-
-.icon-link:hover i::after {
-  top: 0;
-  right: 0;
-  border-radius: 0;
-}
-/* End of Icon Links */
-
-/* Footer Icons */
-.footer {
-  width: 100%;
-  height: 15rem;
-  background-color: #eee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@media (max-width: 1600px) {
-  .icons {
-    width: 80%;
-  }
-}
-
-@media (max-width: 1200px) {
-  .top-nav {
-    background: #010101;
-  }
-
-  .nav-list {
-    justify-content: center;
-  }
-
-  .nav-link {
-    font-size: 25px;
-  }
-
-  .icons {
-    width: 70%;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-  }
-
-  .icon-link {
-    width: 180px;
-    height: 180px;
-    margin: 20px;
-  }
-
-  .icon-link i {
-    width: 130px;
-    height: 130px;
-    font-size: 40px;
-  }
-}
-
-@media (max-width: 900px) {
-  .banner-btn {
-    width: 300px;
-    height: 80px;
-    font-size: 30px;
-  }
-
-  .top-nav {
-    height: 25vh;
-    top: -25vh;
-  }
-
-  .bottom-nav {
-    height: 75vh;
-    bottom: -75vh;
-  }
-
-  .nav-link {
-    margin: 3px 0;
-  }
-
-  .nav-list {
-    width: 70%;
-    flex-wrap: wrap;
-    align-content: center;
-  }
-
-  .icons {
-    width: 95%;
-  }
-
-  .icon-link {
-    width: 140px;
-    height: 140px;
-  }
-
-  .icon-link i {
-    width: 90px;
-    height: 90px;
-    font-size: 30px;
-  }
-}
-
-@media (max-width: 750px) {
-  .nav-list {
-    width: 60%;
-  }
-
-  .icon-link {
-    width: 120px;
-    height: 120px;
-  }
-
-  .icon-link i {
-    width: 70px;
-    height: 70px;
-  }
-}
-
-@media (max-width: 550px) {
-  .banner-btn {
-    width: 280px;
-    height: 70px;
-    font-size: 25px;
-  }
-
-  .logo {
-    width: 70px;
-    height: 70px;
-    left: 30px;
-  }
-
-  .top-nav {
-    height: 30vh;
-    top: -30vh;
-  }
-
-  .bottom-nav {
-    height: 70vh;
-    bottom: -70vh;
-  }
-
-  .icon-link {
-    width: 110px;
-    height: 110px;
-  }
-
-  .icon-link i {
-    width: 60px;
-    height: 60px;
-  }
-}
-
-@media (max-width: 450px) {
-  .banner-btn {
-    width: 260px;
-    height: 60px;
-  }
-
-  .top-nav {
-    height: 35vh;
-    top: -35vh;
-  }
-
-  .bottom-nav {
-    height: 65vh;
-    bottom: -65vh;
-  }
-
-  .nav-list {
-    width: 50%;
-  }
-}
-
-/* Footer */
-.footer-content {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 50%;
-}
-
-.copyright {
-  order: 1;
-  margin-top: 3rem;
-}
-
-@media (max-width: 700px) {
-  .banner h1 {
-    font-size: 4rem;
-    line-height: 5rem;
-  }
-
-  .banner p {
-    font-size: 2rem;
-  }
-
-  .field {
-    width: 35rem;
-  }
-
-  .input-group textarea {
-    max-width: 35rem;
-  }
-
-  .submit-btn {
-    width: 35rem;
-  }
-}
-
-@media (max-width: 500px) {
-  html {
-    font-size: 45%;
-  }
-
-  .footer {
-    height: 18rem;
-  }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Slabo+27px" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="../Project Page/projects.css">
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" type="text/css"  href="updated_portfolio/hamburger.css"> -->
+   
+    <title>Projects Page</title>
+</head>
+<body>
+
+    
+    <!-- Banner -->
+    <div class="container">
+        <div class="banner">
+            <div class="logo">
+                <a href="../index.html"><img src="../images/portfolio-logo.png"></a>
+            </div>
+            <!-- <div class="btn-wrapper">
+              <button class="banner-btn"><a href="../index.html">Contact Me</button></a> -->
+
+              <div class="btn-wrapper">
+                <button class="banner-btn">Explore More</button>
+          </div>
+        </div>
+      </div>
+      <!-- End of Banner -->
+
+        <!-- <header>
+          <div class="container">
+          <a href="../index.html">
+          <button class="button">Home</button>
+          </a></di>
+        </header>  -->
+
+        <!-- Nav Bar -->
+        <div class="nav-wrapper">
+            <div class="hamburger-menu">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+                <div class="line line-3"></div>
+            </div>
+
+            <nav class="top-nav">
+                <ul class="nav-list">
+                    <li>
+                        <a href="../index.html" class="nav-link" data-text="Home">Home</a>
+                    </li>
+                    <li>
+                      
+                        <a href="#" class="nav-link"  data-text="About Me">About Me</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link" data-text="Achievements">Achievements</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link" data-text="Frontend">Frontend</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link" data-text="Backend">Backend</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link" data-text="Contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <nav class="bottom-nav">
+                <ul class="icons">
+                    <li class="icon-item">
+                        <a href="https://www.facebook.com/rico.mccoy.90/" class="icon-link"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li class="icon-item">
+                        <a href="https://github.com/rmccoy2k" class="icon-link"><i class="fab fa-github"></i></a>
+                    </li>
+                    <li class="icon-item">
+                        <a href="https://www.linkedin.com/in/rico-mccoy-0b097116a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Ba2a%2BUzORRUehwHGbvd%2BTgQ%3D%3D" class="icon-link"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                    <!-- <li class="icon-item">
+                        <a href="#" class="icon-link"><i class="fab fa-youtube"></i></a>
+                    </li>
+                    <li class="icon-item">
+                        <a href="#" class="icon-link"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="icon-item">
+                        <a href="#" class="icon-link"><i class="fab fa-google-plus-g"></i></a>
+                    </li> -->
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- End of Nav Bar -->
+
+  <!-- <header>
+    <div class="container">
+    <a href="../index.html">
+    <button class="button">Home</button>
+    </a></di>
+  </header>  -->
+
+  <header>
+    <form id="form">
+      <!-- <input type="text" id="search" class="search" placeholder="Search"> -->
+    </form>
+  </header>
+
+  <!-- Banner -->
+  <!-- <div class="banner">
+    <h1>Welcome To Rico McCoy's Porfolio!</h1>
+  <div>
+    <p><b><em>Click:</b> The button below if you want to view all of Rico projects</em></em></p>
+    <li><a href="images/banner-2.jpg">
+    <button>Projects</button> -->
+    <!-- <button type="button">Projects</button> -->
+  <!-- </div>
+</a></li> -->
+
+  <!-- Sidebar -->
+  <!-- <section class="sidebar">
+    <ul class="menu">
+      <li class="menu-item">
+        <a href="../index.html" class="menu-link" data-content="Home">Home</a>
+      </li>
+      <li class="menu-item">
+        <a href="#about-us" class="menu-link" data-content="About Me">About Me</a>
+      </li>
+      <li class="menu-item">
+        <a href="#images" class="menu-link" data-content="Achievements">Achievements</a>
+      </li>
+      <li class="menu-item">
+        <a href="#images-1" class="menu-link" data-content="Frontend">Frontend</a>
+      </li>
+      <li class="menu-item">
+        <a href="#images-2" class="menu-link" data-content="Backend">Backend</a>
+      </li>
+      <li class="menu-item">
+        <a href="#contact" class="menu-link" data-content="Contact">Contact</a>
+      </li>
+      </ul> -->
+
+  <!-- Rotating Nav -->
+  <!-- <div class="container">
+    <div class="circle-container">
+    <div class="circle">
+      <button id="close">
+        <i class="fas fa-times"></i>
+      </button>
+      <button id="open">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    </div> -->
+
+    <!-- Continuation -->
+    <!-- <nav id="nav">
+      <ul>
+        <li class="current"><a href="projects.html">Home</a></li> -->
+
+  <!-- Main -->
+  <!-- Project (1) -->
+  <div class="container">
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv5n8SLJbp2-FOd619OMpTSFDk_5qi1C3JWg&usqp=CAU"
+          alt="" width="200" height="400">
+        <div class="center">
+          <h3>Startup Landing Page</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <em>
+            <p>Landing page that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em>
+          <form action="https://rmccoy2k.github.io/startup-of-the-year-/">
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (2) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://assets1.ignimgs.com/2018/06/28/25disneyanimated-blogroll-1530224402897.jpg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>Web Page With Animated Images</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <em>
+            Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em>
+          <form action="https://rmccoy2k.github.io/Animated-Images/">
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (3) -->
+    <main id="main">
+      <div class="project">
+        <img
+          src="https://images-na.ssl-images-amazon.com/images/I/81kIqoytPGL._AC_SL1500_.jpg" alt=""
+          width="200" height="400">
+        <div class="center">
+          <h3>Expandable Image Slides</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <em>
+            <p>Expandable image slides, that was build using <b>HTML5,</b> <b>CSS3,</b> <b>Flexbox</b> & <b>JavaScript</b>.
+          </em>
+          </p>
+          <form action="https://rmccoy2k.github.io/Expandable-Slide-Images/">
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (4) -->
+    <main id="main">
+      <div class="project">
+        <img
+          src="https://i1.wp.com/blog.gceasy.io/wp-content/uploads/2016/11/shutterstock_47835124.jpg?fit=1400%2C1400&ssl=1"
+          alt="" width="200" height="400">
+        <div class="center">
+          <h3>Rotating Contact Page</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <em>
+            <p>This contact page rotate to the right; as well as, allows you to scroll up and down. This project was build using <b>HTML5</b>, <b>CSS3</b> & <b>JavaScript</b>.</p>
+          </em>
+          <form action="https://rmccoy2k.github.io/Rotating-Contact-Page/">
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (5) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://static01.nyt.com/images/2020/09/14/business/14movie-tenet/merlin_176507883_99c30ad7-2cc1-4071-8cc2-52866fb7b05c-mobileMasterAt3x.jpg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>Movie application</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <em>
+            <p>This movie application would allow you to search any movie by using "keywords"; as well as, provides an overview about the movie when hovering over the image. This project was build using <b>HTML5</b>, <b>CSS3</b> & <b>JavaScript</b>.</p>
+          </em>
+          <form action="https://rmccoy2k.github.io/Movie-App/">
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (6) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://previews.123rf.com/images/maxkabakov/maxkabakov1711/maxkabakov171100356/89113252-cryptocurrency-concept-computer-keyboard-with-word-ripple-on-enter-button-background-3d-rendering.jpg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>Ripple Button Effect</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <em>
+            <p>This button will display animation flashes wherever you touch it. This project was build using <b>HTML5</b>, <b>CSS3</b> & <b>JavaScript</b>.</p>
+          </em>
+          <form action="https://rmccoy2k.github.io/Ripple-Button-Effect/">
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (7) -->
+    <main id="main">
+      <div class="project">
+        <img src="../images/bep-1.jpg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>Microsoft SQL Server Management Studio Project <b>(SSMS)</b></h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <div>
+            <p><em>
+            "Export SQL Data From <b>(SSMS)</b> To A Flat File"
+            </em></p>
+          </div>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>No Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (8) -->
+    <main id="main">
+      <div class="project">
+        <img src="../images/bep-2.jpg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>Microsoft SQL Server Management Studio Project <b>(SSMS)</b></h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <div>
+            <em><p>
+              Migrate/ Move Data from (1) database to another database within <b>SSMS</b> (SQL to SQL Data Transformation From Source to Destination)
+            </p></em>
+          </div>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>No Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (9) -->
+    <main id="main">
+      <div class="project">
+        <img src="../images/bep-3.jpg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>Microsoft SQL Server Intergration Services Project <b>(SSIS)</b></h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <div>
+            <em><p>
+              Migrate/ Move Data to <b>(SSIS)</b> from an <b>(SSMS)</b> database with an Excel file using the Export Wizard
+            </em></p>
+          </div>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>No Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (10) -->
+    <main id="main">
+      <div class="project">
+        <img src="../images/turtles-1.jpg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>Comic Website</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <div>
+            <em><p>This Comic website was build from scratch and fully responsive. This project was build using <b>HTML5</b>, <b>CSS3</b> & <b>JavaScript</b>.</p></em>
+          </div>
+          
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <form action="https://rmccoy2k.github.io/comic-website/">
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  
+      <!-- Project (11) -->
+      <main id="main">
+        <div class="project">
+          <img src="../images/bep-4.png" alt="" width="200" height="400">
+          <div class="center">
+            <h3>Microsoft SQL Server Management Studio Project <b>(SSMS)</b></h3>
+          </div>
+          <div class="overview">
+            <h3><b>Overview</b></h3>
+            <br>
+            <div>
+              <em><p>
+                Converted a Text File into a <b>“.XLS”</b> or a <b>“.CSV”</b> File
+              </em></p>
+            </div>
+            <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+              <div class="center">
+                <button>No Live Demo</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+  
+      <!-- Project (12) -->
+      <main id="main">
+        <div class="project">
+          <img
+            src="../images/fep-2.jpg" alt=""
+            width="200" height="400">
+          <div class="center">
+            <h3>COMING SOON</h3>
+          </div>
+          <div class="overview">
+            <h3><b>Overview</b></h3>
+            <br>
+            <!-- <em>
+              <p>Expandable image slides, that was build using <b>HTML5,</b> <b>CSS3,</b> <b>Flexbox</b> & <b>JavaScript</b>.</p>
+            </em> -->
+            <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+              <div class="center">
+                <button>Live Demo</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+  
+      <!-- Project (13) -->
+      <main id="main">
+        <div class="project">
+          <img
+            src="../images/bep-5.jpg"
+            alt="" width="200" height="400">
+          <div class="center">
+            <h3>Microsoft SQL Server Management Studio Project <b>(SSMS)</b></h3>
+          </div>
+          <div class="overview">
+            <h3><b>Overview</b></h3>
+            <br>
+            <em>
+              <p>Imported a Flat File/Raw Data to Microsoft SQL Server Manager Studio <b>(SSMS).</b></p>
+            </em>
+            <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+              <div class="center">
+                <button>No Live Demo</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+  
+      <!-- Project (14) -->
+      <main id="main">
+        <div class="project">
+          <img src="../images/king-kong-1.jpg" alt="" width="200" height="400">
+          <div class="center">
+            <h3>COMING SOON</h3>
+          </div>
+          <div class="overview">
+            <h3><b>Overview</b></h3>
+            <br>
+            <!-- <em>
+              <p>This movie application would allow you to search any movie by using "keywords"; as well as, provides an overview about the movie when hovering over the image. This project was build using <b>HTML5</b>, <b>CSS3</b> & <b>JavaScript</b>.</p>
+            </em> -->
+            <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+              <div class="center">
+                <button>Live Demo</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+  
+      <!-- Project (15) -->
+    <main id="main">
+      <div class="project">
+        <img src="../images/bep-6.png" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (16) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (17) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (18) -->
+    <main id="main">
+      <div class="project">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt=""
+          width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Expandable image slides, that was build using <b>HTML5,</b> <b>CSS3,</b> <b>Flexbox</b> & <b>JavaScript</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (19) -->
+    <main id="main">
+      <div class="project">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg"
+          alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>This contact page rotate to the right; as well as, allows you to scroll up and down. This project was build using <b>HTML5</b>, <b>CSS3</b> & <b>JavaScript</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (20) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>This movie application would allow you to search any movie by using "keywords"; as well as, provides an overview about the movie when hovering over the image. This project was build using <b>HTML5</b>, <b>CSS3</b> & <b>JavaScript</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (21) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>This button will display animation flashes wherever you touch it. This project was build using <b>HTML5</b>, <b>CSS3</b> & <b>JavaScript</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (22) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (23) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (24) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>  
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  </main>
+
+  <!-- Project (25) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg"
+          alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Landing page that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (26) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/Animated-Images/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (27) -->
+    <main id="main">
+      <div class="project">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt=""
+          width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Expandable image slides, that was build using <b>HTML5,</b> <b>CSS3,</b> <b>Flexbox</b> & <b>JavaScript</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/Expandable-Slide-Images/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (28) -->
+    <main id="main">
+      <div class="project">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg"
+          alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>This contact page rotate to the right; as well as, allows you to scroll up and down. This project was build using <b>HTML5</b>, <b>CSS3</b> & <b>JavaScript</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/Rotating-Contact-Page/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (29) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>This movie application would allow you to search any movie by using "keywords"; as well as, provides an overview about the movie when hovering over the image. This project was build using <b>HTML5</b>, <b>CSS3</b> & <b>JavaScript</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/Movie-App/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (30) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>This button will display animation flashes wherever you touch it. This project was build using <b>HTML5</b>, <b>CSS3</b> & <b>JavaScript</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/Ripple-Button-Effect/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (31) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (32) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (33) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (34) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  
+      <!-- Project (35) -->
+      <main id="main">
+        <div class="project">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+          <div class="center">
+            <h3>COMING SOON</h3>
+          </div>
+          <div class="overview">
+            <h3><b>Overview</b></h3>
+            <br>
+            <!-- <em>
+              <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+            </em> -->
+            <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+              <div class="center">
+                <button>Live Demo</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+  
+      <!-- Project (36) -->
+      <main id="main">
+        <div class="project">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt=""
+            width="200" height="400">
+          <div class="center">
+            <h3>COMING SOON</h3>
+          </div>
+          <div class="overview">
+            <h3><b>Overview</b></h3>
+            <br>
+            <!-- <em>
+              <p>Expandable image slides, that was build using <b>HTML5,</b> <b>CSS3,</b> <b>Flexbox</b> & <b>JavaScript</b>.</p>
+            </em> -->
+            <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+              <div class="center">
+                <button>Live Demo</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+  
+      <!-- Project (37) -->
+      <main id="main">
+        <div class="project">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg"
+            alt="" width="200" height="400">
+          <div class="center">
+            <h3>COMING SOON</h3>
+          </div>
+          <div class="overview">
+            <h3><b>Overview</b></h3>
+            <br>
+            <!-- <em>
+              <p>This contact page rotate to the right; as well as, allows you to scroll up and down. This project was build using <b>HTML5</b>, <b>CSS3</b> & <b>JavaScript</b>.</p>
+            </em> -->
+            <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+              <div class="center">
+                <button>Live Demo</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+  
+      <!-- Project (38) -->
+      <main id="main">
+        <div class="project">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+          <div class="center">
+            <h3>COMING SOON</h3>
+          </div>
+          <div class="overview">
+            <h3><b>Overview</b></h3>
+            <br>
+            <!-- <em>
+              <p>This movie application would allow you to search any movie by using "keywords"; as well as, provides an overview about the movie when hovering over the image. This project was build using <b>HTML5</b>, <b>CSS3</b> & <b>JavaScript</b>.</p>
+            </em> -->
+            <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+              <div class="center">
+                <button>Live Demo</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+  
+      <!-- Project (39) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (40) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (41) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (42) -->
+    <main id="main">
+      <div class="project">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt=""
+          width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Expandable image slides, that was build using <b>HTML5,</b> <b>CSS3,</b> <b>Flexbox</b> & <b>JavaScript</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (43) -->
+    <main id="main">
+      <div class="project">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg"
+          alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>This contact page rotate to the right; as well as, allows you to scroll up and down. This project was build using <b>HTML5</b>, <b>CSS3</b> & <b>JavaScript</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (44) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>This movie application would allow you to search any movie by using "keywords"; as well as, provides an overview about the movie when hovering over the image. This project was build using <b>HTML5</b>, <b>CSS3</b> & <b>JavaScript</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (45) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>This button will display animation flashes wherever you touch it. This project was build using <b>HTML5</b>, <b>CSS3</b> & <b>JavaScript</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (46) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (47) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (48) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (49) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (50) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (51) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (52) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (53) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (54) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (55) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (56) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (57) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (58) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project (59) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+  <!-- Project (60) -->
+    <main id="main">
+      <div class="project">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdoJyFW3f2sD55Ni5rR1ByiokJb_xVBS8qA&usqp=CAU.jpeg" alt="" width="200" height="400">
+        <div class="center">
+          <h3>COMING SOON</h3>
+        </div>
+        <div class="overview">
+          <h3><b>Overview</b></h3>
+          <br>
+          <!-- <em>  
+            <p>Web-page with animated images, that was build using <b>HTML5</b> & <b>CSS3</b>.</p>
+          </em> -->
+          <!-- <form action="https://rmccoy2k.github.io/startup-of-the-year-/"> -->
+            <div class="center">
+              <button>Live Demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+<!-- Add this div below to the main area for my project page on my portfolio 
+
+<div class="movie">
+  <img src="https://images.unsplash.com/photo-1518173835740-f5d14111d76a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OHx8bW92aWUlMjBzZWF0c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+  <div class="movie-info">
+    <h3>Movie Title</h3>
+    <span class="green">9.8</span>
+  </div>
+  <div class="overview">
+    <h3>overview</h3>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia hic sed possimus veritatis, rerum iure ipsum nihil recusandae, quod blanditiis facere assumenda officiis magnam doloribus.
+  </div>
+</div>
+
+-->
+
+ <!-- Footer & Icons -->
+ <footer class="footer">
+  <div class="footer-content">
+    <p class="copyright">
+      Copyright &copy; 2021 | Created by Rico McCoy | All Rights Reserved
+    </p>
+    <div class="social-list">
+    <a href="https://www.facebook.com/rico.mccoy.90/"><i class="fab fa-facebook-square"></i></a>
+    <a href="https://github.com/rmccoy2k"><i class="fab fa-github-square"></i></a>
+    <!-- <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a> -->
+    <a href="https://www.linkedin.com/in/rico-mccoy-0b097116a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Ba2a%2BUzORRUehwHGbvd%2BTgQ%3D%3D"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+</footer>
+<a href="#" class="scroll-btn">
+  <i class="fas fa-arrow-up"></i>
+</a>
+</div>
+
+
+<!--Linked Badge  -->
+<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+  
+<script src="../Project Page/projects.js"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"
+></script>
+
+<script src="tilt.js"></script>
+
+<!-- <script src="hamburger.js"></script> -->
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
