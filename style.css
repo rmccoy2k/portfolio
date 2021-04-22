@@ -604,8 +604,8 @@ html {
 }
 
 .about-us-img-wrapper img {
-  width: 33rem; /*<<Image Size*/
-  height: 33rem; /*<<Image Size*/
+  width: 30.5rem; /*<<Image Size*/
+  height: 30.5rem; /*<<Image Size*/
   /* height: 30.5rem; */
   object-fit: cover;
   border-radius: 56%; /* Image Shape */
@@ -614,7 +614,7 @@ html {
   opacity: 0.2;
   position: relative;
   bottom: 19%; /*<<Image Position*/
-  right: 2%; /*<<Image Position*/
+  right: -2%; /*<<Image Position*/
   background-size: cover;
   background-position: 100%;
   background: 5rem 37rem rgba(5, 5, 5, 5);
