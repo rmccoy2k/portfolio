@@ -613,8 +613,8 @@ html {
   padding: 0.5rem;
   opacity: 0.2;
   position: relative;
-  bottom: 17%; /*<<Image Position*/
-  right: -1%; /*<<Image Position*/
+  bottom: 16%; /*<<Image Position*/
+  right: -0%; /*<<Image Position*/
   background-size: cover;
   background-position: 100%;
   background: 5rem 37rem rgba(5, 5, 5, 5);
