@@ -608,7 +608,7 @@ html {
   height: 31rem; /*31<<Image Size*/
   /* height: 30.5rem; */
   object-fit: cover;
-  border-radius: 56%; /* Image Shape */
+  border-radius: 50%; /* Image Shape */
   border: 0.7rem dotted #07acf3;
   padding: 0.5rem;
   opacity: 0.2;
