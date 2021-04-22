@@ -604,8 +604,8 @@ html {
 }
 
 .about-us-img-wrapper img {
-  width: 31rem; /*<<Image Size*/
-  height: 31rem; /*31<<Image Size*/
+  width: 100%; /*<<Image Size*/
+  /* height: 31rem; */
   /* height: 30.5rem; */
   object-fit: cover;
   border-radius: 50%; /* Image Shape */
