@@ -364,6 +364,21 @@ html {
   }
 }
 
+/* Logo */
+.logo {
+  height: 80px;
+  width: 80px;
+  position: fixed;
+  top: 20px;
+  left: 50px;
+  z-index: 100;
+}
+
+.logo img {
+  width: 100%;
+}
+/* End of Logo */
+
 /* Nav Sidebar */
 .sidebar {
   width: 40rem;
@@ -595,6 +610,7 @@ html {
   justify-content: center;
   align-items: center;
   padding: 0 5rem 20rem 5rem;
+  position: absolute;
 }
 
 .about-us-img-wrapper {
@@ -605,8 +621,8 @@ html {
 
 .about-us-img-wrapper img {
   width: 100%; /*<<Image Size*/
-/*width: 31rem; */
-/*height: 31rem; */
+  /*width: 31rem; */
+  /*height: 31rem; */
   object-fit: cover;
   border-radius: 50%; /* Image Shape */
   border: 0.7rem dotted #07acf3;
@@ -692,16 +708,6 @@ span:nth-child(4) {
   padding-bottom: 15rem;
   /* padding: 0 5rem 20rem 5rem; */
 }
-
-/*  */
-/*  Images */
-/*  Images & Info */
-.images {
-  width: 100%;
-  background-color: #f5f5f5;
-  padding-bottom: 15rem;
-}
-/*  */
 
 .images-1 {
   width: 100%;
