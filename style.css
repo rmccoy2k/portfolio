@@ -306,7 +306,7 @@ input:focus {
   height: 100%;
   object-fit: cover;
   opacity: 0.3;
-  animation: scale 45s;
+  animation: scale 55s;
 }
 
 /* Img Animations */
