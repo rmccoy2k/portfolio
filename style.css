@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* body {  
+/* body {
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
@@ -275,6 +275,22 @@ html {
   perspective: 100rem;
   overflow: hidden;
 }
+
+/* Auto Text */
+
+/* input {
+  width: 50px;
+  padding: 5px;
+  font-size: 18px;
+  background-color: rgb(226, 178, 116);
+  border: none;
+  text-align: center;
+} */
+
+/* input:focus {
+  outline: none;
+} */
+/* End of Auto Text */
 
 /* Banner Image */
 .img-wrapper {
