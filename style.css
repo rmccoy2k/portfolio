@@ -278,18 +278,18 @@ html {
 
 /* Auto Text */
 
-/* input {
+input {
   width: 50px;
   padding: 5px;
   font-size: 18px;
   background-color: rgb(226, 178, 116);
   border: none;
   text-align: center;
-} */
+}
 
-/* input:focus {
+input:focus {
   outline: none;
-} */
+}
 /* End of Auto Text */
 
 /* Banner Image */
@@ -306,7 +306,7 @@ html {
   height: 100%;
   object-fit: cover;
   opacity: 0.3;
-  animation: scale 25s;
+  animation: scale 45s;
 }
 
 /* Img Animations */
