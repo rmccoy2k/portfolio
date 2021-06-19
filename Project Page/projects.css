@@ -394,7 +394,7 @@ button .circle {
   width: 100%;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(../images/banner-1.jpg) center no-repeat;
+    url(images/banner-1.jpg) center no-repeat;
   background-size: cover;
 }
 /* End of Banner */
